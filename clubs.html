@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./form.css">
+    <!-- <link rel="stylesheet" href="./clubs.css"> -->
+    <link rel="shortcut icon" href="./images/logo.png" type="img/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>CSaR | Clubs</title>
+</head>
+
+<style>
+  .zoom {
+  padding: 0px;
+  height: 200px;
+  width: 300px;
+  transition: transform 0.2s; /* Animation */
+  margin: 0 auto;
+  padding: 5px;
+
+}
+
+.zoom:hover {
+  transform: scale(1.05);
+  box-shadow:0 5px 20px #393838;
+}
+.vd-cutm{
+    box-shadow: 0 5px 20px #393838;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    justify-content: center;
+    margin: 0.2rem;
+    padding: 0.5rem;
+
+}
+.vd-cutm-item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    justify-content: center;
+
+}
+</style>
+
+<body  class="font" style="background:#d3e9f9;">
+    <nav  class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #A41034;">
+        <div class="container-fluid ">
+            <!-- Image and text -->
+            <a class="navbar-brand" href="./" style="font-weight: 600;">
+                <img src="./images/logo.png" width="35" height="35" class="d-inline-block align-top" alt="">
+                CSaR@cutmpkd
+            </a>
+
+            <div class="menu d-flex">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./">Home</a>
+                        </li>
+                        <li class="nav-item">
+	                        <a class="nav-link active" data-bs-toggle="modal" data-bs-target="#id01" style="cursor: pointer;">join CSaR</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./imagefront.php">Gallary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./coreteam.php">Core-Team</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Clubs
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item " href="./clubs.html">Dance Club</a></li>
+                                <li><a class="dropdown-item " href="./clubs.html">music club</a></li>
+                                <li><a class="dropdown-item " href="./clubs.html">Phoenix Coding Club</a></li>
+                                <li><a class="dropdown-item " href="./clubs.html">Robotics Club</a></li>
+                                <li><a class="dropdown-item " href="./clubs.html">language club</a></li>
+                                <li><a class="dropdown-item " href="./clubs.html">painting club</a></li>
+                                <li><a class="dropdown-item " href="./clubs.html">Sport club</a></li>
+                                <li><a class="dropdown-item " href="./clubs.html">Yoga club</a></li>
+                                <li><a class="dropdown-item " href="./clubs.html">Youth Red cross</a></li>
+                                <li><a class="dropdown-item " href="./clubs.html">NCC</a></li>
+                                <li><a class="dropdown-item " href="./clubs.html">NSS</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item " href="./newclub.html">send new club idea</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./about.php">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#login-modal">Login</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- <form class="d-flex" role="search" action="https://cutm.icloudems.com/corecampus/index.php">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Login</button>
+                </form> -->
+            </div>
+            <button class="navbar-toggler " style="border: 2px solid white;" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"  ></span>
+            </button>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="accordion-item">
+            <!-- <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button text-center" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                </button>
+            </h2> -->
+            <div id="collapseOne" class="accordion-collapse collapse show vd-cutm" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body vd-cutm-item">
+                    <video id="vid1" class="vid" src="./videos/CUTM1.mp4" onloadstart="this.playbackRate = 1.5;" height="300" loop="true" autoplay="autoplay" muted></video>
+                    <video id="vid2" class="vid" src="./videos/CUTM2.mp4" onloadstart="this.playbackRate = 1.5;" height="300" loop="true" autoplay="autoplay" muted></video>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Culture
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        
+                          <div>
+                            <h2>1.Painting club</h2>
+                            <a href="#"><img class="zoom" src="./img/paint1.jpg" alt="image" /></a>
+                            <a href="#"><img class="zoom" src="./img/paint.jpg" alt="image" /></a>
+                            <a href="#"><img class="zoom" src="./img/painting0.jpeg" alt="image" /></a>
+                          </div>
+                      
+                          <p>
+                            The Centurion University Drawing and Painting Club (DPC) unites students
+                            interested in visual and graphic arts. As a collective of artists who
+                            work with mediums ranging from watercolour to digital drawing, we
+                            welcome all enthusiasts of any background, interest, or skill level.
+                            Regular workshops are held throughout the semester so members can learn,
+                            create, inspire, connect and improve
+                          </p>
+                          <h3>Club Aims</h3>
+                          <p>
+                            1.To connect like-minded people who are interested in drawing and
+                            painting.
+                          </p>
+                          <p>
+                            2.To provide a regular place for students to paint and draw together and
+                            to share their views about hard by organising a variety of drawing
+                            workshops.
+                          </p>
+                          <p>
+                            3.To promote different types of drawing and painting such as watercolour
+                            painting, pencil sketching, digital art and other creative forms of art.
+                          </p>
+                          <p>4.To help students relieve stress through drawing and painting.</p>
+                          <p>5.To spark students’ creativity and imagination.</p>
+                      
+                          <div class="dance">
+                            <h2>2.dance club</h2>
+                            <img class="zoom" src="./img/dance.jpeg" alt="image" />
+                            <img class="zoom" src="./img/dance.jpg" alt="image" />
+                            <img class="zoom" src="./img/dance0.jpeg" alt="image" />
+                          </div>
+                          <p>
+                            The motto of the Dance Club is to nurture the talent, celebrate the
+                            diversity and give expressions to the creativity of young minds. It
+                            encourages students to participate in various inter and intra college
+                            dance competitions. The club is actively involved in organizing various
+                            dance competitions in the college. This club makes the students to adapt
+                            creative, fun and easy way of learning dance. Dance club keeps the
+                            students to be fit, socialise and learning skills through dance.
+                            Students participated in other colleges and also brought laurels for the
+                            university.
+                          </p>
+                          <h3>The main purpose / objectives of this club</h3>
+                          <p>
+                            To strengthen the students creative skills in live performance through
+                            dance forms.
+                          </p>
+                          <p>To enhance the dance talent among the students</p>
+                          <p>
+                            To encourage the students to actively participating in various dance
+                            events conducted within the campus
+                          </p>
+                          <p>To showcase the talents of the students in various forms of dance.</p>
+                          <p>
+                            develop a powerful framework that allows the students to become
+                            passionate and professional dancers to craft their own professional
+                            talents.
+                          </p>
+                          <div class="photography">
+                            <h2>3.photography</h2>
+                            <img class="zoom" src="./img/th (1).jpeg" alt="image" />
+                            <img class="zoom" src="./img/th.jpeg" alt="image" />
+                            <img class="zoom" src="./img/photography0.jpeg" alt="image" />
+                          </div>
+                          <p>
+                            The mission of the Photography Club (f/stops) is to provide a supportive
+                            environment for interested photography students to share their
+                            creativity, knowledge and passion for photography. The club will hold
+                            regular meetings and discussions and organize events such as;
+                            photo-walks, field trips, and lectures and workshops by visiting
+                            artists. Members will also explore the possible opportunities for
+                            photography projects in collaboration with other campus departments,
+                            organize peer to peer portfolio reviews and explore the possibilities of
+                            exhibitions on and off campus
+                          </p>
+                          <h3>objective</h3>
+                          <p>
+                            >The club will mainly focus on the overall development of photography
+                            skills of students, and at end students can appreciate the skill.
+                          </p>
+                          <p>>At end of every session students take home new concept.</p>
+                          <p>
+                            >Create a repository of exclusive pictures shot by the members for
+                            Educational & Research purpose. f/stops.(Photography Club of cutm)
+                          </p>
+                          <p>
+                            >We arrange few outdoor sessions so students can directly implement few
+                            skills or tips given.
+                          </p>
+                          <p>
+                            For every session we have different internal objectives to do according
+                            to the topic we work on that session
+                          </p>
+                      
+                          <div class="radio">
+                            <h2>4. radio club</h2>
+                            <a href="#"><img class="zoom" src="./img/radio.jpg" alt="image" /></a>
+                            <a href="#"><img class="zoom" src="./img/radio1.jpg" alt="image" /></a>
+                            <a href="#"><img class="zoom" src="./img/radio0.png" alt="image" /></a>
+                          </div>
+                      
+                          <p>
+                            Students involve in different clubs which include Campus Radio Club that
+                            brings updates about the college life and the events that are going to
+                            be organized. The announcements includes annual day, cultural fest etc.
+                          </p>
+                          <p>
+                            Campus radio (also known as college radio, university radio or student
+                            radio) is a type of radio station that is run by the students of a
+                            college, university or other educational institution. Programming may be
+                            exclusively created or produced by students, or may include program
+                            contributions from the local community in which the radio station is
+                            based. Sometimes campus radio stations are operated for the purpose of
+                            training professional radio personnel, sometimes with the aim of
+                            broadcasting educational programming, while other radio stations exist
+                            to provide alternative to commercial broadcasting or government
+                            broadcasters.
+                          </p>
+                      
+                          <div class="music club">
+                            <h2>5.music club</h2>
+                            <a href="#"><img class="zoom" src="./img/music.jpg" alt="image" /></a>
+                            <a href="#"><img class="zoom" src="./img/instrument.jpg.png" alt="image" /></a>
+                            <a href="#"><img class="zoom" src="./img/music0.gif" alt="image" /></a>
+                          </div>
+                          <p>
+                            Music is generally defined as the art of arranging sound to create some
+                            combination of form, harmony, melody, rhythm or otherwise expressive
+                            content.Exact definitions of music vary considerably around
+                            the world, though it is an aspect of all human societies, a cultural
+                            universal. While scholars agree that music is defined by a few
+                            specific elements, there is no consensus on their precise
+                            definitions.The creation of music is commonly divided into musical
+                            composition, musical improvisation, and musical performance, though
+                            the topic itself extends into academic disciplines, criticism,
+                            philosophy, and psychology. Music may be performed or improvised using a
+                            vast range of instruments, including the human voice.
+                          </p>
+                          <p>
+                            In some musical contexts, a performance or composition may be to some
+                            extent improvised. For instance, in Hindustani classical music, the
+                            performer plays spontaneously while following a partially defined
+                            structure and using characteristic motifs. In modal jazz the performers
+                            may take turns leading and responding, while sharing a changing set of
+                            notes. In a free jazz context, there may be no structure whatsoever,
+                            with each performer acting at their discretion. Music may be
+                            deliberately composed to be unperformable, or agglomerated
+                            electronically from many performances. Music is played in public and
+                            private areas, highlighted at events such as festivals, rock concerts,
+                            and orchestra performance, and heard incidentally as part of a score or
+                            soundtrack to a film, TV show, opera, or video game. Musical playback is
+                            the primary function of an MP3 player or CD player and a universal
+                            feature of radios and smartphones.
+                          </p>
+                          <p>
+                            Music often plays a key role in social activities, religious rituals,
+                            rite of passage ceremonies, celebrations, and cultural activities. The
+                            music industry includes songwriters, performers, sound engineers,
+                            producers, tour organizers, distributors of instruments, accessories,
+                            and sheet music. Compositions, performances, and recordings are assessed
+                            and evaluated by music critics, music journalists, and music scholars,
+                            as well as amateurs
+                          </p>
+                      
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Sport
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        
+                      
+                          <p>
+                            Sports are a common thread that binds people together from all around
+                            the globe. doesn't mean everyone loves the same sport; rather, because
+                            there are so many different sports to play and enjoy, everyone has a
+                            preference
+                          </p>
+                          <p>
+                            Sports are physical activities that set opponents against each other for
+                            the goal of the competition and involve feats of strength, agility,
+                            dexterity, and other abilities.
+                          </p>
+                          <p>
+                            The competition can occasionally involve two people, two teams, or
+                            multiple people, and it can range from fun (Badminton) to hazardous
+                            (Karate & Professional Boxing). Professional players are still among the
+                            world's wealthiest individuals, earning hundreds of millions of dollars
+                            in sponsorships and commercial agreements. Sports have been an age-old
+                            institution in most civilizations and carry immense status. how they are
+                            different and what uniqueness they hold.
+                          </p>
+                          <div class="footbal">
+                            <h2>1.football</h2>
+                            <a href="#"><img class="zoom" src="./img/Football.jpg" alt="image" /></a>
+                            <a href="#"><img class="zoom" src="./img/foot.jpg" alt="image" /></a>
+                            <img class="zoom" src="./img/f.jpg" alt="image" />
+                          </div>
+                          <p>
+                            Associate Football, often known as soccer or football, is a sport in
+                            which two teams of eleven players compete with a spherical ball. It is
+                            the most popular sport in the world, with 250 million players in over
+                            200 countries. A rectangular field with a goal at each end is used to
+                            play the game. The purpose of the game is to get the football into the
+                            opposition goal using any part of the body other than the arms and
+                            hands.
+                          </p>
+                          <p>
+                            Only goalkeepers are permitted to touch the ball with their hands or
+                            arms while it is in play, and only within their own penalty area. It now
+                            ranks among the richest sports in the world in terms of revenue. Soccer
+                            has the most fans in every country in the world. The number of
+                            individuals who watch the sport's global and regional championships on a
+                            regular basis is unrivaled. The World Cup, which takes place every four
+                            years, is the most important competition in football. The FIFA World Cup
+                            2018 was watched by over 3.2 billion people, according to reports. It is
+                            without a doubt the most-watched sporting event on the planet.
+                          </p>
+                          <div class="Cricket">
+                            <h2>2.cricket</h2>
+                            <img class="zoom" src="./img/cricket.jpg" alt="image" />
+                          </div>
+                          <p>
+                            Cricket is a bat-and-ball sport in which two teams of 11 players compete
+                            on a field with a rectangular 22-yard pitch in the middle. Batting
+                            alternates between the two contending sides in an attempt to score runs.
+                            The opposite team fields while one team bats. An innings is the unit of
+                            measurement for each turn. Tests, One-Day Internationals, and Twenty-20
+                            Internationals are the three different formats of cricket. The
+                            popularity of cricket has risen dramatically since the introduction of
+                            the T20 format. In India, Pakistan, Australia, England, South Africa,
+                            Sri Lanka, New Zealand, the West Indies, Bangladesh, and Zimbabwe,
+                            cricket is extremely popular. Because cricket is a popular sport in only
+                            roughly 15 nations, the number of professional leagues in the world is
+                            also limited. Cricket's league structure is very young, but it is
+                            gaining popularity. The Indian Premier League, or IPL, is one of the
+                            most prestigious sports leagues in the world, having only been
+                            established a few years ago. Another significant competition of cricket
+                            is the Big Bash League in Australia. More countries are gradually
+                            constructing cricket leagues, and the number of professional leagues is
+                            expected to rise in the near future.
+                          </p>
+                      
+                          <div class="basketball">
+                            <h2>3. Basketball</h2>
+                            <a href="#"><img class="zoom" src="./img/baske.jpg" alt="image" /></a>
+                            <a href="#"><img class="zoom" src="./img/bas.jpg" alt="image" /></a>
+                            <a href="#"><img class="zoom" src="./img/bask.jpg" alt="image" /></a>
+                          </div>
+                          <p>
+                            Basketball is a sport played on a rectangular court by two teams of five
+                            players. The goal is to shoot a ball through a hoop with a diameter of
+                            18 inches (46 cm) and a height of 10 feet (3.0 m) mounted on a backboard
+                            at each end. During ordinary play, a team can score a field goal by
+                            shooting the ball through the basket. If a player is touching or closer
+                            to the hoop than the three-point line on a field goal, the shooting team
+                            receives two points, and three points if the player is below the
+                            three-point line. At the end of the game, the team with the most points
+                            wins. Basketball is the world's third most popular sport, both in terms
+                            of participation and viewership. Basketball lovers number between 2 to 3
+                            billion people. The majority of supporters are based in the United
+                            States, Canada, China, Japan, and the Philippines. Basketball is played
+                            professionally in many nations across the world. The NBA, on the other
+                            hand, is by far the most popular.
+                          </p>
+                      
+                          <div class="Tennis">
+                            <h2>4.Tennis</h2>
+                            <img class="zoom" src="./img/Tennis.jpg" alt="image" />
+                          </div>
+                      
+                          <p>
+                            Tennis is a sport in which participants compete against a single
+                            opponent (singles) or between two teams of two players each (doubles).
+                            Each player hits a hollow rubber ball covered in felt over or around a
+                            net and into the opponent's court with a racket attached with a cord.
+                            The goal of the game is to play the ball in a way that prevents the
+                            opponent from making a successful return.
+                          </p>
+                          <p>
+                            Tennis has a large following throughout the world. Although, in affluent
+                            countries, it is more popular than in poor countries. Tennis players
+                            like Roger Federer and Rafael Nadal are well-known all over the world
+                            and have a global fan base of hundreds of millions. Tennis is a sport in
+                            which you compete against yourself. National tennis federations exist in
+                            practically every country. Every year, competitions are held at both the
+                            international and national levels. The four major slams, Wimbledon, the
+                            US Open, the French Open, and the Australian Open, are the most
+                            prestigious tennis tournaments. Millions of people throughout the world
+                            watch and follow them.
+                          </p>
+                      
+                          <div class="Volleyball">
+                            <h2>5.Volleyball</h2>
+                            <img class="zoom" src="./img/Volleyball.jpg" alt="image" />
+                          </div>
+                      
+                          <p>
+                            Volleyball is the 6th most popular sport in the world, with 900 million
+                            supporters spread over Asia, Europe, the Americas, and Australia.
+                            Volleyball is a team sport in which a net separates two teams of six
+                            players. Under regulated regulations, each team aims to score points by
+                            grounding a ball on the other team's court. Since 1964, it has been a
+                            part of the official Summer Olympic Games program. All sports have
+                            national federations, but volleyball has the most. These federations
+                            frequently organize professional and semi-professional leagues. The FIVB
+                            Volleyball Championship is the world's largest volleyball competition.
+                            The event is held every four years and involves 24 countries.
+                          </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Responsibility
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                          <div class="footbal">
+                            <div class="footbal">
+                              <h2>1.NCC Cell</h2>
+                              <a href="#"><img class="zoom" src="./img/ncc.jpg" alt="image" /></a>
+                              <a href="#"><img class="zoom" src="./img/ncc.jpeg" alt="image" /></a>
+                              <a href="#"><img class="zoom" src="./img/ncc0.jpeg" alt="image" /></a>
+                            </div>
+                            <h2>National Cadet Corps (NCC):</h2>
+                            <p>
+                              The National Cadet Corps is the Indian military cadet corps with its
+                              head Quarters at New Delhi. It is open to school and college students
+                              on voluntary basis.The National Cadet Corps in India is a voluntary
+                              organization which recruits cadets from high schools, colleges and
+                              Universities all over India. The Cadets are given basic military
+                              training in small arms and parades. The officers and cadets have no
+                              liability for active military service once they complete their course
+                              but are given preference over normal candidates during selections
+                              based on the achievements in the corps.
+                            </p>
+                            <h3>Motto of NCC:</h3>
+                            <p>Unity and Discipline (EktaaurAnushasan)</p>
+                            <h2>Four Cardinal Principles of Discipline:</h2>
+                            <p>>Obey with a smile</p>
+                            <p>>Be Punctual</p>
+                            <p>>Work hard and without fuss</p>
+                            <p>>Make no excuses and tell no lies</p>
+                            <h2>Aims of NCC:</h2>
+                            <p>
+                              1. To develop qualities of character, courage, comradeship,
+                              discipline, leadership, secular outlook, spirit of adventure and
+                              sportsmanship and the ideals of selfless service among the youth to
+                              make them useful citizen.
+                            </p>
+                            <p>
+                              2. To create a human resource of organised trained and motivated youth
+                              to provide leadership in all walks of life including the Armed Forces
+                              and be always available for the service of the nation.
+                            </p>
+                            <div>
+                              <h2>Type of Examination:</h2>
+                              <p>
+                                The type of Certificate Examination and the unit in which these are
+                                held are given below
+                              </p>
+                              <table>
+                                <tr>
+                                  <th>Type of Certificate</th>
+                                  <th>NCC unit</th>
+                                </tr>
+                                <tr>
+                                  <td>Certificate ‘A’</td>
+                                  <td>Junior Division/Wing NCC</td>
+                                </tr>
+                                <tr>
+                                  <td>Certificate ‘B’& ‘C’</td>
+                                  <td>Senior Division/Wing NCC</td>
+                                </tr>
+                              </table>
+                            </div>
+                      
+                            <div class="Cricket">
+                              <h2>2.NSS CELL</h2>
+                              <img class="zoom" src="./img/nss.jpg" alt="image" />
+                              <img class="zoom" src="./img/nss1.jpg" alt="image" />
+                              <img class="zoom" src="./img/nss0.jpg" alt="image" />
+                            </div>
+                            <h3>National Service Scheme (NSS):</h3>
+                            <p>
+                              The National Service Scheme (NSS) is an Indian government-sponsored
+                              public service program conducted by the Department of Youth Affairs
+                              and Sports of the Government of India. Popularly known as NSS, the
+                              scheme was launched in Gandhiji’s Centenary year, 1969. Aimed at
+                              developing student’s personality through community service, NSS is a
+                              voluntary association of young people in Colleges, Universities and at
+                              +2 level working for a campus-community linkage. The cardinal
+                              principle of the NSS programme is that it is organized by the students
+                              themselves, and both students and teachers through their combined
+                              participation in community service, get a sense of involvement in the
+                              tasks of nation building.
+                            </p>
+                            <h3>Motto of NSS</h3>
+                            <p>
+                              The Motto of NSS “Not Me But You”, reflects the essence of democratic
+                              living and upholds the need for self-less service. NSS helps the
+                              students develop appreciation to other person’s point of view and also
+                              show consideration to ‘/other living beings. The philosophy of the NSS
+                              is well doctrined in this motto, which underlines/on the belief that
+                              the welfare .of an individual is ultimately dependent on the welfare
+                              of the society on the whole and therefore, the NSS volunteers shall
+                              strive for the well-being of the society.
+                            </p>
+                            <h3>Aims & Objectives of NSS</h3>
+                            <p>1.To understand the community in which they work</p>
+                            <p>2.To understand the community in which they work;</p>
+                            <p>3.To understand themselves in relation to their community;</p>
+                            <p>
+                              4.To identify the needs and problems of the community and involve them
+                              in problem solving process;
+                            </p>
+                            <p>
+                              5.To develop among themselves a sense of social and civic
+                              responsibility;
+                            </p>
+                            <p>
+                              6.To utilise their knowledge in finding practical solution to
+                              individual and community problems;
+                            </p>
+                            <p>
+                              7.To develop competence required for group-living and sharing of
+                              responsibilities:
+                            </p>
+                            <p>8.To gain skills in mobilising community participation;</p>
+                            <p>9.To acquire leadership qualities and democratic attitude;</p>
+                            <p>10.To develop capacity to meet emergencies and natural disasters;</p>
+                            <p>11.To practice national integration and social harmony.</p>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modals-->
+    <div class="modal fade" id="id01" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Join CSaR @ Centurion University</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="modal-content" action="form.php" method="post" name="formu1">
+                        <div class="container">
+                            <p>Please fill this form to Join CSaR Clubs.</p>
+                            <label for="name"><b>Student Name</b></label>
+                            <input type="text" placeholder="Full Name" name="name" id="name" required>
+
+                            <label for="reg"><b>Registration No.</b></label>
+                            <input type="text" placeholder="Registration No." name="reg" id="reg">
+
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+                            <label for="phone"><b>Mobile No.</b></label>
+                            <input type="text" placeholder="Enter mobile No." name="phone" id="phone" required>
+
+                            <label for="program"><b>Program</b></label>
+                            <select class="form-select" aria-label="Default select example" name="program" id="program"
+                                onchange="populate(this.id,'branch')" required>
+                                <option selected>---</option>
+                                <option value="B.Tech">B.Tech</option>
+                                <option value="B.Sc">B.SC.</option>
+                                <option value="B.Pharma">B.Pharma</option>
+                                <option value="B.Com">B.Com</option>
+                                <option value="BCA">BCA</option>
+                                <option value="BBA">BBA</option>
+                                <option value="B.Vocational">B.Vocational</option>
+                                <option value="Diploma">Diploma</option>
+                                <option value="ITI">ITI</option>
+                                <option value="M.Tech">M.Tech</option>
+                                <option value="M.Sc">M.Sc</option>
+                                <option value="MBA">MBA</option>
+                                <option value="MCA">MCA</option>
+                                <option value="PhD">PhD</option>
+                                <option value="other">other</option>
+                            </select>
+
+                            <label for="branch"><b>Branch</b></label>
+                            <select class="form-select" aria-label="Default select example" id="branch"
+                                name="branch"></select>
+
+                            <label for="club"><b>CSR Club Name</b></label>
+                            <input type="text" placeholder="club" name="club" id="club" required>
+
+                            <label for="other"><b>Description</b></label>
+                            <input type="text" placeholder="write about your interest" name="other" id="other">
+
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                                Remember me
+                            </label>
+
+                            <p>By creating an account you agree to our <a href="#"
+                                    style="color:dodgerblue; text-decoration: none;">Terms & Privacy</a>.
+                            </p>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" onclick="submit_form();" class="btn btn-primary">SignUp</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!--User login modal-->
+<div class="modal fade" id="login-modal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #A41034;">
+                <div class="card-header text-center  text-white" >
+                    <h2>Student Login</h2>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="login-form" action="./login.php" method="post" autocomplete="off">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email5" class="form-control" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">password</label>
+                        <input type="password" id="password5" class="form-control" name="password" required />
+                    </div>
+                    <br>
+                    <button type="submit" class="btn w-100 text-white" style="background-color: #A41034;">Login</button>
+                    <a href="./userpass.php" style="text-decoration: none;"><small>Forget password</small></a>
+                </form>
+
+                <div class="card-footer text-end">
+                        <button class="btn btn-sm w-25 text-white" style="background-color: #A41034;" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#admin-login-modal">Admin</button>
+                    <small>&copy; Centurion University</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--admin modal-->
+<div class="modal fade" id="admin-login-modal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #A41034;">
+                <div class="card-header text-center  text-white" >
+                    <h2>ADMIN LOGIN </h2>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="admin_form"  action="admin.php" method="post">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" class="form-control" name="username" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">password</label>
+                        <input type="password" id="password" class="form-control" name="password" required />
+                    </div>
+                    <br>
+                    <button name="admin-btn" type="submit" class="btn w-100 text-white" onclick="admin_login();"
+                        style="background-color: #A41034;">Login</button>
+                    <a href="pupdate.php" style="text-decoration: none;"><small>Forget password</small></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+      function populate(s1,s2){
+    var s1 = document.getElementById(s1);
+    var s2 = document.getElementById(s2);
+    s2.innerHTML = "";
+    if(s1.value == "B.Tech"){
+        var optionArray = ["|","CSE|CSE","ECE|ECE","EEE|EEE","Mechanical|Mechanical","Civil|Civil","Dairy tech|Dairy tech","Agri.|Agri.","Phyto|Phyto","Mining|Mining","Aerospace|Aerospace","Bio-tech|Bio-tech","other|other"];
+    } else if(s1.value == "B.Sc"){
+        var optionArray = ["|","B.sc.(hons.) Agriculture|B.sc.(hons.) Agriculture","B.Sc. Fishery|B.Sc. Fishery","Applied Science|Applied Science","Paramedical|Paramedical","Forensic|Forensic","other|other"];
+    } else if(s1.value == "B.Pharma"){
+        var optionArray = ["|","B.Pharma|B.Pharma","other|other"];
+    } else if(s1.value == "B.Com"){
+        var optionArray = ["|","B.Com|B.Com","other|other"];
+    } else if(s1.value == "BCA"){
+        var optionArray = ["|","BCA|BCA","other|other"];
+    } else if(s1.value == "BBA"){
+        var optionArray = ["|","BBA|BBA","other|other"];
+    } else if(s1.value == "B.Vocational"){
+        var optionArray = ["|","B.Vocational|B.Vocational","other|other"];
+    } else if(s1.value == "Diploma"){
+        var optionArray = ["|","CSE|CSE","ECE|ECE","EE|EE","Civil|Civil","Mechanical|Mechanical","Automobile|Automobile","Mining|Mining","D. pharma|D. pharma","Paramedical|Paramedical","other|other"];
+    } else if(s1.value == "ITI"){
+        var optionArray = ["|","Automobile|Automobile","|Electrical|Electrical","Mechanical|Mechanical","other|other"];
+    } else if(s1.value == "M.Tech"){
+        var optionArray = ["|","PSCE|PSCE","SE|SE","TE|TE","other|other"];
+    } else if(s1.value == "M.Sc"){
+        var optionArray = ["|","Paramedical|Paramedical","Applied science|Applied science","Agriculture|Agriculture","Forensic|Forensic","Cyber security|Cyber security","other|other"];
+    } else if(s1.value == "MBA"){
+        var optionArray = ["|","MBA|MBA","other|other"];
+    } else if(s1.value == "MCA"){
+        var optionArray = ["|","MCA|MCA","other|other"];
+    } else if(s1.value == "PhD"){
+        var optionArray = ["|","PhD|PhD","other|other"];
+    }
+
+
+    for(var option in optionArray){
+        var pair = optionArray[option].split("|");
+        var newOption = document.createElement("option");
+        newOption.value = pair[0];
+        newOption.innerHTML = pair[1];
+        s2.options.add(newOption);
+    }
+}
+        function submit_form() {
+            if (!document.getElementById('email').value) {
+                alert("All field are required..");
+
+            }
+            else {
+                document.formu1.submit();
+                document.formu1.reset();
+                document.getElementById('id01').style.display = 'none';
+            }
+
+        }
+    </script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"-->
+    <!--    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">-->
+    <!--    </script>-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+<html>
